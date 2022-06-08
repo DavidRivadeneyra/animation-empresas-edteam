@@ -1,8 +1,11 @@
-.tableAnimation {
-	background: red;
-	display: flex;
-	flex-direction: column;
-	padding: 16px;
-	height: 300px;
-	width: 100%;
+.bg-table {
+	height: 47px;
+}
+
+.table-items {
+	display: none;
+}
+
+.bar-complete {
+	display: none;
 }
