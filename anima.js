@@ -23,14 +23,17 @@ tlFloating
 	})
 
 tlBarStatus
-	.to('.bar-status', {
+	.to('.bar-charge', {
 		delay: 3,
 		duration: 3,
 		width: '74',
 		ease: Power3.easeInOut,
 	})
-	.to('.bar-status', {
-		// delay: 3,
+	.to('.bar-charge', {
 		fill: colorBarFull,
-		duration: 3,
 	})
+tlBarStatus.to('bar-complete', {
+	duration: 3,
+})
+
+console.log('hola')
