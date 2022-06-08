@@ -8,6 +8,8 @@ let tlBarStatus = gsap.timeline({
 	repeat: -1,
 })
 
+let tlTable = gsap.timeline({})
+
 let colorBarFull = 'rgb(9, 214, 156)'
 
 tlFloating
@@ -34,6 +36,10 @@ tlBarStatus
 	})
 tlBarStatus.to('bar-complete', {
 	duration: 3,
+})
+
+tlTable.to('.table-01', {
+	display: 'none',
 })
 
 console.log('hola')
