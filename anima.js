@@ -2,11 +2,11 @@ let tlFloating = gsap.timeline({
 	repeat: -1,
 })
 
-let tlBarStatus = gsap.timeline({
+let barStatus = gsap.timeline({
 	repeat: -1,
 })
 
-let tlTable = gsap.timeline({
+let tableItems = gsap.timeline({
 	repeat: -1,
 })
 
@@ -14,8 +14,13 @@ let test = gsap.timeline({
 	repeat: -1,
 })
 
-let barStatusDelay = 3,
-	barStatusDuration = 3
+const barStatusDelay = 3,
+	barStatusDuration = 3,
+	tableItemsDelay = 6,
+	tableItemDisplayBlock = 0.5,
+	tableItemsDuration = 2.5,
+	tableHeightDuration = 0,
+	tableHeightNegativeDuration = '-=3'
 
 tlFloating
 	.to('.bg-img', {
@@ -29,9 +34,11 @@ tlFloating
 		duration: 0.9,
 	})
 
-tlBarStatus
+barStatus
 	.to('.bar-charge', {
 		delay: barStatusDelay,
+	})
+	.to('.bar-charge', {
 		duration: barStatusDuration,
 		width: '74',
 		ease: Power3.easeInOut,
@@ -41,70 +48,70 @@ tlBarStatus
 		display: 'block',
 	})
 
-tlTable
-	.to('.table-01', {
-		delay: 6,
+// Table items
+
+tableItems
+	.to('.item-table-01', {
+		delay: tableItemsDelay,
 		x: '-10',
 	})
-	.to('.table-01', {
+	.to('.item-table-01', {
 		x: '0',
 		display: 'block',
-		ease: Back.easeOut.config(3),
-		// ease: Elastic.easeOut.config(1.2, 0.75),
+		duration: tableItemDisplayBlock,
+		ease: 'back.out(3)',
 	})
-
-	.to('.table-01', {
-		duration: '3',
+	.to('.item-table-01', {
+		duration: tableItemsDuration,
 	})
 	.to(
-		'.bg-table',
+		'.table-height',
 		{
 			height: '75px',
-			ease: Back.easeOut.config(2),
+			duration: tableHeightDuration,
 		},
-		'-=3.5'
+		tableHeightNegativeDuration
 	)
-	.to('.table-02', {
-		delay: 6,
+
+	.to('.item-table-02', {
+		delay: tableItemsDelay,
 		x: '-10',
 	})
-	.to('.table-02', {
+	.to('.item-table-02', {
 		x: '0',
 		display: 'block',
-		ease: Back.easeOut.config(3),
-		// ease: Elastic.easeOut.config(1.2, 0.75),
+		duration: tableItemDisplayBlock,
+		ease: 'back.out(3)',
 	})
-
-	.to('.table-02', {
-		duration: '3',
+	.to('.item-table-02', {
+		duration: tableItemsDuration,
 	})
 	.to(
-		'.bg-table',
+		'.table-height',
 		{
 			height: '107px',
-			ease: Back.easeOut.config(2),
+			duration: tableHeightDuration,
 		},
-		'-=3.5'
+		tableHeightNegativeDuration
 	)
-	.to('.table-03', {
-		delay: 6,
-		x: '-30',
+	.to('.item-table-03', {
+		delay: tableItemsDelay,
+		x: '-10',
 	})
-	.to('.table-03', {
+	.to('.item-table-03', {
 		x: '0',
 		display: 'block',
-		ease: Back.easeOut.config(3),
-		// ease: Elastic.easeOut.config(1.2, 0.75),
+		duration: tableItemDisplayBlock,
+		ease: 'back.out(3)',
 	})
-
-	.to('.table-03', {
-		duration: '3',
+	.to('.item-table-03', {
+		duration: tableItemsDuration,
 	})
 	.to(
-		'.bg-table',
+		'.table-height',
 		{
 			height: '139px',
-			ease: Back.easeOut.config(2),
+			duration: tableHeightDuration,
 		},
-		'-=3.5'
+		tableHeightNegativeDuration
 	)

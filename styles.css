@@ -9,3 +9,11 @@
 .bar-complete {
 	display: none;
 }
+
+.icons {
+	border: 1px solid red;
+}
+
+.text {
+	color: #000;
+}
