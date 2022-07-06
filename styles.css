@@ -10,10 +10,26 @@
 	display: none;
 }
 
-.icons {
-	border: 1px solid red;
+.icon-check {
+	display: none;
 }
 
-.text {
-	color: #000;
+.icon-tech {
+	display: none;
+}
+
+.item-job {
+	display: none;
+}
+
+.icon-cargo {
+	display: none;
+}
+
+.item-avatar {
+	display: none;
+}
+
+.graphic-item {
+	display: none;
 }
